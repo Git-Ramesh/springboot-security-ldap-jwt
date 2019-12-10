@@ -1,0 +1,12 @@
+server:
+  port: 4014
+  
+security:
+  jwt:
+    token:
+      secret-key: secret
+      expire-time: 3600000 
+
+ldap:
+  url: ldap://localhost:10389/uid=admin,ou=system
+  user: admin
