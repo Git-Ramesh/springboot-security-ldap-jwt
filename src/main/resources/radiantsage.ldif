@@ -1,0 +1,53 @@
+version: 1
+
+dn: ou=groups,dc=radiantsage,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: dc=radiantsage,dc=com
+objectclass: top
+objectclass: domain
+dc: radiantsage
+
+dn: cn=admin,ou=groups,dc=radiantsage,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: admin
+uniqueMember: uid=ramesh,ou=people,dc=radiantsage,dc=com
+
+dn: ou=people,dc=radiantsage,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: people
+
+dn: uid=sowmya,ou=people,dc=radiantsage,dc=com
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: sowmya
+sn: Daddanala
+givenName: Sowmya
+mail: sowmya@test.com
+uid: sowmya
+userPassword: {SSHA}1YJa7/VjJLBQYFP/Adfy82DUXGeVpVu3/zEVwg==
+
+dn: uid=ramesh,ou=people,dc=radiantsage,dc=com
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: ramesh
+sn: Panthangi
+givenName: Ramesh
+mail: ramesh@radiantsage.com
+uid: ramesh
+userPassword: {SSHA}zThanSLls2XpHCOpw1mjTVmZENuGwO1GXKsQBg==
+
+dn: cn=user,ou=groups,dc=radiantsage,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: user
+uniqueMember: uid=sowmya,ou=people,dc=radiantsage,dc=com
+

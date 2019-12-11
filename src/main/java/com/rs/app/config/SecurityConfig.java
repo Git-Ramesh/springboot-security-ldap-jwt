@@ -1,5 +1,8 @@
 package com.rs.app.config;
 
+import javax.naming.directory.DirContext;
+import javax.naming.ldap.LdapContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
@@ -37,15 +40,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Bean
 	public LdapContextSource contextSource() {
 		LdapContextSource contextSource = new LdapContextSource();
-		contextSource.setUrl("ldap://localhost:10389");
+		contextSource.setUrl("ldap://localhost:1389");
 		contextSource.setBase("dc=radiantsage,dc=com");
+//		contextSource.setUserDn("cn=Directory Manager");
+//		contextSource.setPassword("123456");
 		return contextSource;
 	}
-
-	@Bean
-	public LdapTemplate ldapTemplate() {
-		return new LdapTemplate(contextSource());
-	}
+//
+//	@Bean
+//	public LdapTemplate ldapTemplate() {
+//		return new LdapTemplate(contextSource());
+//	}
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {

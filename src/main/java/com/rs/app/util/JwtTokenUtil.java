@@ -12,9 +12,9 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
+import com.rs.app.ldap.repository.LdapUserRepository;
 import com.rs.app.model.LdapUser;
 import com.rs.app.model.LdapUserDetails;
-import com.rs.app.repository.LdapUserRepository;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;

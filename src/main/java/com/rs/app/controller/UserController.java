@@ -22,11 +22,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rs.app.ldap.repository.GroupRepository;
+import com.rs.app.ldap.repository.LdapUserRepository;
 import com.rs.app.model.Group;
 import com.rs.app.model.LdapUser;
 import com.rs.app.model.LdapUserDetails;
-import com.rs.app.repository.GroupRepository;
-import com.rs.app.repository.LdapUserRepository;
 import com.rs.app.util.JwtTokenUtil;
 
 @RestController

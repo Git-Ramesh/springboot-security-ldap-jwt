@@ -7,6 +7,6 @@ security:
       secret-key: secret
       expire-time: 3600000 
 
-ldap:
-  url: ldap://localhost:10389/uid=admin,ou=system
-  user: admin
+#ldap:
+#  url: ldap://localhost:10389/uid=admin,ou=system
+#  user: admin
